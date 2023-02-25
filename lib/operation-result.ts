@@ -19,10 +19,22 @@ export class OperationResult<T> {
     return result;
   }
 
-  static failed<T>(err?: Error): OperationResult<T> {
+  static failed<T>(message: string, err?: Error): OperationResult<T> {
     const result = new OperationResult<T>();
-    result.message = err?.message;
+    result.message = message || err?.message;
     result.status = OperationResultStatus.failed;
+    return result;
+  }
+  static notFound<T>(message: string, err?: Error): OperationResult<T> {
+    const result = new OperationResult<T>();
+    result.message = message || err?.message;
+    result.status = OperationResultStatus.notFound;
+    return result;
+  }
+  static unauthorized<T>(message: string, err?: Error): OperationResult<T> {
+    const result = new OperationResult<T>();
+    result.message = message || err?.message;
+    result.status = OperationResultStatus.unauthorized;
     return result;
   }
 }
