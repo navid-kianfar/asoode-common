@@ -1,0 +1,8 @@
+{
+  "name": "asoode-common",
+  "version": "0.0.1",
+  "description": "common models, contracts, enums ... shared by asoode application",
+  "main": "index.js",
+  "author": "Navid Kianfar",
+  "license": "ISC"
+}
