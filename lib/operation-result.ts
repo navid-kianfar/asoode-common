@@ -12,9 +12,10 @@ export class OperationResult<T> {
   message?: string;
   status: OperationResultStatus = OperationResultStatus.pending;
 
-  static success<T>(data?: T): OperationResult<T> {
+  static success<T>(data?: T, message?: string): OperationResult<T> {
     const result = new OperationResult<T>();
     result.data = data;
+    result.message = message;
     result.status = OperationResultStatus.success;
     return result;
   }
