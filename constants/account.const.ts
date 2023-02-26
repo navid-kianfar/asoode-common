@@ -1,4 +1,4 @@
-export const AccountErrors = {
+export const AccountMessages = {
     invalid_model: 'Invalid model',
     username_already_exists: 'Username already exists',
     username_does_not_exists: 'Username does not exists',
